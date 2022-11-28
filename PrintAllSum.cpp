@@ -2,6 +2,7 @@
 using namespace std;
 
 void check(int i,vector<int> &s,vector<int> &ss, int sum, int t){
+    // Base Case
     if(i==s.size()){
         if(t==sum){
             for(auto a:ss) cout<<a<<" ";
@@ -9,10 +10,12 @@ void check(int i,vector<int> &s,vector<int> &ss, int sum, int t){
         }
         return;
     }
+    // Include
     ss.push_back(s[i]);
     sum+=s[i];
     check(i+1,s,ss,sum,t);
     
+    // Exclude
     sum-=s[i];
     ss.pop_back();
     check(i+1,s,ss,sum,t);

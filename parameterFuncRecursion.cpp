@@ -2,16 +2,17 @@
 using namespace std;
 // PARAMETIRIZED
 void Son(int i,int sum){
+    // BaseCase
     if(i<1){
         cout<<(sum);
         return;
     }
-    Son(i-1,sum+i);
+    Son(i-1,sum+i);  
 }
 
 // FUNCTIONAL 
-
 int sonN(int n){
+    // BaseCase
     if(n==0){
         return 0;
     }
@@ -19,6 +20,6 @@ int sonN(int n){
 }
 int main(){
     int n=3;
-    // Son(n,0);
+    Son(n,0);
 
 }

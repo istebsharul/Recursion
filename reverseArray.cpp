@@ -18,12 +18,13 @@ void reverseArray(int arr[],int n){
 }
 
 // Using Recursion
-
 void rA(int i,int arr[],int n){
     if(i>=n/2) return;
     swap(arr[i],arr[n-i-1]);
     rA(i+1, arr, n);
 }
+// T.C => O(n/2)
+// S.C => 
 
 int main(){
     int n=5;
